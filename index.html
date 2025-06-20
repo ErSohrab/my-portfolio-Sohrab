@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Sohrab Ali</title>
+    <!-- Tailwind CSS script is removed -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="classStyle.css">
+
+</head>
+
+<body class=""> <!-- Dark mode class added by JS -->
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar-main">
+        <div class="container navbar-container">
+            <a href="#home" class="navbar-brand">Sohrab Ali</a>
+            <div class="navbar-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#profile" class="nav-link">Profile</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#social" class="nav-link">Social</a>
+                <a href="#contact" class="nav-link">Contac Us</a>
+                <button id="darkModeToggle" class="dark-mode-toggle">
+                    <i class="fas fa-moon"></i> <!-- Moon icon initially -->
+                </button>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-button-container">
+                <button id="darkModeToggleMobile" class="dark-mode-toggle" style="margin-right: 0.5rem;">
+                    <!-- Added margin for spacing -->
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobileMenuButton" class="mobile-menu-button">
+                    <i class="fas fa-bars"></i> <!-- Icon class updated to match JS expectations -->
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu-links hidden"> <!-- hidden class will be toggled by JS -->
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#profile" class="nav-link">Profile</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#social" class="nav-link">Social</a>
+            <a href="#contact" class="nav-link">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Landing Page / Hero Section -->
+    <section id="home" class="hero-section fade-in-section">
+        <div class="container hero-content">
+            <img src="Images/profileImage.jpg" alt="Profile Image" class="hero-image">
+            <h1 class="hero-title">Hi, I'm Sohrab Ali</h1>
+            <p class="hero-subtitle">A passionating "Bachelor of Technology" specializing in "Computer Science and
+                Engineering". Welcome to my digital space!</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary transform hover-scale-105">View Projects</a>
+                <a href="#contact" class="btn btn-secondary transform hover-scale-105">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+    <div class="resume">
+        <a id="myCv" href="/My Protfolio Web Page/Sohrab Resume.pdf">Download my Cv </a>
+    </div>
+  
+
+    <!-- Profile Section -->
+    <section id="profile" class="section section-bg-alt fade-in-section">
+        <div class="container">
+            <h2 class="section-title text-primary-heading">About Me & Profile</h2>
+            <div class="profile-grid">
+                <div class="profile-card card-bg">
+                    <h3 class="profile-card-title">Who I Am</h3>
+                    <p class="profile-text text-content">
+                        Hello! I'm Sohrab Ali, a B.Tech CSE student in Haridwar University. I have a deep passion for
+                        coding, solving complex problems, and learning about emerging technologies like AI and machine
+                        learning. I'm excited to explore new opportunities and collaborate with like-minded individuals
+                        to enhance my skills and knowledge in computer science.
+                    </p>
+                    <p class="profile-text text-content">
+                        My journey in Computer Science and Engineering started for September 2023 when I start Higher
+                        Education in My Collage. Since then, I've been dedicated to achieve my goals like "continuously
+                        learning new technologies" and "improve my personal & communication skills . Outside of work, I
+                        enjoy Moto-Riding & travelling.
+                    </p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 2rem;"> <!-- Replaces space-y-8 -->
+                    <div class="profile-card card-bg">
+                        <h3 class="profile-card-title">Qualifications</h3>
+                        <ul class="profile-list text-content">
+                            <li><strong>B.Tech :</strong> <a style="font-size: larger;" href="https://huroorkee.ac.in/">Haridwar University</a>,
+                                 Year - September 2023 to June
+                                2027 -</li>
+                            <li><strong>SGPA : 7.4</strong></li>
+                            <li class="certificate-list" ><strong>Certification:</strong>
+                                <ul >Certificate for the Completion of </ul>
+                                <ul>C Training (IIT Bombay) with 85%</ul>
+                                <ul>Introduction to Front-End Development(meta)</ul>
+                                <ul>Programming with JavaScript(meta, coursera)</ul>
+                                <ul>Getting Python Interview Ready(simpliLearn , SkillUp) </ul>
+                                <ul>Project Management (IBM)</ul>
+                            <li>Another relevant qualification or academic achievement.</li>
+                        </ul>
+                    </div>
+
+                    <div class="profile-card card-bg">
+                        <h3 class="profile-card-title">Work Experience</h3>
+                        <div class="experience-item">
+                            <h4 class="experience-title text-secondary-heading">Fresher</h4>
+                            <p class="experience-details text-muted">Currently I have No Working Experience, but! I try
+                                to do it as soon as possible.</p>
+                            <!-- <ul class="experience-list text-content">
+                                <li>Key responsibility or achievement. Quantify if possible.</li>
+                                <li>Another key responsibility or achievement.</li>
+                                <li>Managed a team or led a specific project initiative.</li>
+                            </ul> -->
+                        </div>
+                        <!-- <div>
+                            <h4 class="experience-title text-secondary-heading">Previous Job Title (Optional)</h4>
+                            <p class="experience-details text-muted">Previous Company Name | City, State | Month Year -
+                                Month Year</p>
+                            <ul class="experience-list text-content">
+                                <li>Key responsibility or achievement.</li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-bg-main fade-in-section">
+        <div class="container">
+            <h2 class="section-title text-primary-heading">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title"><i class="fas fa-code"></i>Programming Languages</h3>
+                    <div class="skill-tags-container">
+                        <span class="skill-tag">C</span><span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span><span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title"><i class="fas fa-cogs"></i>Frameworks & Libraries</h3>
+                    <div class="skill-tags-container">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Numpy</span>
+                        <span class="skill-tag">Pandas</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title"><i class="fas fa-database"></i>Databases</h3>
+                    <div class="skill-tags-container">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title"><i class="fas fa-tools"></i>Tools & Platforms</h3>
+                    <div class="skill-tags-container">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Jupyter Notebook</span>
+                        <span class="skill-tag">Figma</span>
+                    </div>
+                </div>
+                <div class="skill-category-card">
+                    <h3 class="skill-category-title"><i class="fas fa-comments"></i>Soft Skills</h3>
+                    <div class="skill-tags-container">
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Teamwork</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Adaptability</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-bg-alt fade-in-section">
+        <div class="container">
+            <h2 class="section-title text-primary-heading">My Projects</h2>
+            <p class="projects-intro text-muted">
+                Here are some of the projects I've worked on.
+            </p>
+            <div class="projects-grid">
+                <div class="project-card card-bg">
+                    <img src="/Images/LMS.png" alt="Library Management System Screenshot" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Library-Management-System</h3>
+                        <p class="project-description text-content">A browser-based application for managing library
+                            operations, including admin and librarian roles, student and book management, and
+                            transaction tracking.</p>
+                        <p class="project-tech text-light-muted"><strong>Technologies:</strong> HTML5, CSS3, JavaScript,
+                            SQL.
+                        </p>
+                        <div class="project-links">
+                            <a href="http://librarymanagementsystembysohrab.netlify.app" target="_blank"
+                                class="demo-link"><i class="fas fa-external-link-alt"></i>Live
+                                Demo</a>
+                            <a href="https://github.com/ErSohrab/Library-Management-System" target="_blank"
+                                class="source-link"><i class="fab fa-github"></i>Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card card-bg">
+                    <img src="https://placehold.co/600x400/C4B5FD/374151?text=Online Grading System"
+                        alt="Project 2 Screenshot" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Online Grading System</h3>
+                        <p class="project-description text-content">Under Development, <br>May It deploy as soon as
+                            possible</p>
+                        <!-- <p class="project-tech text-light-muted"><strong>Technologies:</strong> Vue.js, Firebase, CSS
+                            Grid</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="demo-link"><i class="fas fa-external-link-alt"></i>Live
+                                Demo</a>
+                            <a href="#" target="_blank" class="source-link"><i class="fab fa-github"></i>Source Code</a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="project-card card-bg">
+                    <img src="https://placehold.co/600x400/DDD6FE/374151?text= Future Projects"
+                        alt="Project 3 Screenshot" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Future Projects+</h3>
+                        <!-- <p class="project-description text-content">A mobile-first application designed for [specific
+                            purpose]. Leveraged modern UI principles for an engaging experience.</p>
+                        <p class="project-tech text-light-muted"><strong>Technologies:</strong> Python (Django),
+                            PostgreSQL, Docker</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="demo-link"><i class="fas fa-external-link-alt"></i>Live
+                                Demo</a>
+                            <a href="#" target="_blank" class="source-link"><i class="fab fa-github"></i>Source Code</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Section -->
+    <section id="social" class="section section-bg-main fade-in-section">
+        <div class="container text-center">
+            <h2 class="section-title text-primary-heading">Connect With Me</h2>
+            <p class="social-intro text-muted">
+                Find me on various platforms. I'm always open to connecting with like-minded professionals and
+                enthusiasts!
+            </p>
+            <div class="social-icons-container">
+                <a href="https://www.linkedin.com/in/sohrab-ali-4a40462b6" target="_blank" class="social-icon-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/ErSohrab?tab=projects" target="_blank" class="social-icon-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?ogbl#drafts?compose=new" class="social-icon-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section section-bg-alt fade-in-section">
+        <div class="container">
+            <h2 class="section-title text-primary-heading">Get In Touch</h2>
+            <div class="contact-form-container card-bg">
+                <p class="contact-intro text-content">
+                    Have a project in mind, a question, or just want to say hi? Feel free to reach out!
+                </p>
+                <form action="https://formspree.io/f/xwpblgad" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label text-content">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input border-color" placeholder="John Doe"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label text-content">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input border-color"
+                            placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label text-content">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input border-color"
+                            placeholder="Project Inquiry">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 2rem;"> <!-- mb-8 -->
+                        <label for="message" class="form-label text-content">Message</label>
+                        <textarea id="message" name="message" class="form-textarea border-color"
+                            placeholder="Your message..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="submit-button transform hover-scale-105">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+                <p class="contact-alt-email text-light-muted">
+                    Or email me directly at: <a href="mailto:your.email@example.com"
+                        class="hover-text-accent">ersohrab8273@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social-links">
+                <a href="https://www.linkedin.com/in/sohrab-ali-4a40462b6" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ErSohrab?tab=projects" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://mail.google.com/mail/u/0/?ogbl#drafts?compose=new"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-copyright">&copy; <span id="currentYear"></span> Sohrab Ali. All rights reserved.</p>
+            <p class="footer-credits">Designed with <i class="fas fa-heart"></i> using CSS.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
