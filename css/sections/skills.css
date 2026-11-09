@@ -1,0 +1,42 @@
+/* ---------- Skills Section ---------- */
+.skills-grid {
+    display: grid;
+    gap: var(--space-6);
+}
+
+.skill-card {
+    transition: border-color var(--transition-base), transform var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.skill-card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.skill-card-featured {
+    border-color: var(--accent-primary);
+    border-left-width: 3px;
+    background-color: var(--bg-elevated);
+}
+
+.skill-card-featured:hover {
+    border-color: var(--accent-primary);
+}
+
+.skill-card-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--text-body);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+}
+
+.skill-card-title i {
+    color: var(--accent-primary);
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}

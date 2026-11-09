@@ -1,0 +1,84 @@
+/* ---------- Experience Section ---------- */
+.experience-timeline {
+    position: relative;
+    display: grid;
+    gap: var(--space-6);
+    max-width: 760px;
+    margin-inline: auto;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 24px;
+    bottom: 24px;
+    width: 2px;
+    background-color: var(--border);
+}
+
+.experience-card {
+    position: relative;
+    padding-left: calc(var(--space-6) + 28px);
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 28px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--bg-card);
+    border: 3px solid var(--accent-primary);
+}
+
+.experience-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-2);
+}
+
+.experience-role {
+    font-size: var(--text-h2);
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+}
+
+.experience-org {
+    color: var(--accent-primary);
+    font-weight: 500;
+    font-size: var(--text-small);
+    margin-bottom: var(--space-4);
+}
+
+.experience-list {
+    display: grid;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.experience-list li {
+    position: relative;
+    padding-left: var(--space-6);
+    color: var(--text-secondary);
+    font-size: var(--text-small);
+}
+
+.experience-list li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--accent-secondary);
+}
+
+.experience-tags {
+    margin-top: var(--space-2);
+}

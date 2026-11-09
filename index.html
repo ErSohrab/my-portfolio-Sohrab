@@ -1,335 +1,584 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Sohrab Ali</title>
-    <!-- Tailwind CSS script is removed -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="classStyle.css">
+    <title>Sohrab Ali | Software Developer & Backend Developer</title>
+    <meta name="description"
+        content="Sohrab Ali is a Software Developer specializing in backend engineering — REST APIs, JWT authentication, database-driven applications, and third-party API integrations.">
+    <meta name="author" content="Sohrab Ali">
+    <meta name="theme-color" content="#0B0F14">
+    <link rel="canonical" href="https://myportfiosohrabali.netlify.app/">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://myportfiosohrabali.netlify.app/">
+    <meta property="og:title" content="Sohrab Ali | Software Developer & Backend Developer">
+    <meta property="og:description"
+        content="Backend-focused software developer building REST APIs, authentication systems, and database-driven applications.">
+    <meta property="og:image" content="https://myportfiosohrabali.netlify.app/assets/images/profileImage.jpg">
+    <meta property="og:image:alt" content="Portrait of Sohrab Ali">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Sohrab Ali | Software Developer & Backend Developer">
+    <meta name="twitter:description"
+        content="Backend-focused software developer building REST APIs, authentication systems, and database-driven applications.">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sohrab Ali",
+        "jobTitle": "Software Developer",
+        "email": "ersohrab8273@gmail.com",
+        "url": "https://myportfiosohrabali.netlify.app/",
+        "image": "https://myportfiosohrabali.netlify.app/assets/images/profileImage.jpg",
+        "sameAs": [
+            "https://github.com/ErSohrab",
+            "https://linkedin.com/in/Sohrab-ali-4a40462b6"
+        ],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Haridwar University"
+        },
+        "knowsAbout": [
+            "Backend Development",
+            "Node.js",
+            "Express.js",
+            "REST API Development",
+            "JWT Authentication",
+            "MongoDB",
+            "MySQL"
+        ]
+    }
+    </script>
+
+    <!-- Theme initialization (prevents flash of wrong theme; script.js takes over) -->
+    <script>
+        (function () {
+            var theme = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (theme === 'dark' || (!theme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class=""> <!-- Dark mode class added by JS -->
+<body>
 
-    <!-- Navigation Bar -->
-    <nav id="navbar" class="navbar-main">
-        <div class="container navbar-container">
-            <a href="#home" class="navbar-brand">Sohrab Ali</a>
-            <div class="navbar-links">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#profile" class="nav-link">Profile</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#social" class="nav-link">Social</a>
-                <a href="#contact" class="nav-link">Contac Us</a>
-                <button id="darkModeToggle" class="dark-mode-toggle">
-                    <i class="fas fa-moon"></i> <!-- Moon icon initially -->
-                </button>
-            </div>
-            <!-- Mobile Menu Button -->
-            <div class="mobile-menu-button-container">
-                <button id="darkModeToggleMobile" class="dark-mode-toggle" style="margin-right: 0.5rem;">
-                    <!-- Added margin for spacing -->
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button id="mobileMenuButton" class="mobile-menu-button">
-                    <i class="fas fa-bars"></i> <!-- Icon class updated to match JS expectations -->
-                </button>
-            </div>
-        </div>
+    <!-- Site Header / Navigation -->
+    <header class="site-header" id="navbar">
+        <nav class="nav-container container" aria-label="Primary navigation">
+            <a href="#home" class="nav-brand" aria-label="SA — Sohrab Ali, back to home">SA</a>
+
+            <button id="darkModeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+
+            <button id="mobileMenuButton" class="mobile-menu-button" aria-label="Open menu" aria-expanded="false"
+                aria-controls="mobileMenu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="mobile-menu-links hidden"> <!-- hidden class will be toggled by JS -->
+        <div id="mobileMenu" class="mobile-menu hidden">
             <a href="#home" class="nav-link">Home</a>
-            <a href="#profile" class="nav-link">Profile</a>
+            <a href="#about" class="nav-link">About</a>
             <a href="#skills" class="nav-link">Skills</a>
+            <a href="#experience" class="nav-link">Experience</a>
             <a href="#projects" class="nav-link">Projects</a>
-            <a href="#social" class="nav-link">Social</a>
-            <a href="#contact" class="nav-link">Contact Us</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
-    </nav>
+    </header>
 
-    <!-- Landing Page / Hero Section -->
-    <section id="home" class="hero-section fade-in-section">
-        <div class="container hero-content">
-            <img src="Images/profileImage.jpg" alt="Profile Image" class="hero-image">
-            <h1 class="hero-title">Hi, I'm Sohrab Ali</h1>
-            <p class="hero-subtitle">A passionating "Bachelor of Technology" specializing in "Computer Science and
-                Engineering". Welcome to my digital space!</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary transform hover-scale-105">View Projects</a>
-                <a href="#contact" class="btn btn-secondary transform hover-scale-105">Get In Touch</a>
-            </div>
-        </div>
-    </section>
-    <div class="resume">
-        <a id="myCv" href="/Sohrab Resume.pdf">Download my Resume</a>
-    </div>
-  
+    <main>
 
-    <!-- Profile Section -->
-    <section id="profile" class="section section-bg-alt fade-in-section">
-        <div class="container">
-            <h2 class="section-title text-primary-heading">About Me & Profile</h2>
-            <div class="profile-grid">
-                <div class="profile-card card-bg">
-                    <h3 class="profile-card-title">Who I Am</h3>
-                    <p class="profile-text text-content">
-                        Hello! I'm Sohrab Ali, a B.Tech CSE student in Haridwar University. I have a deep passion for
-                        coding, solving complex problems, and learning about emerging technologies like AI and machine
-                        learning. I'm excited to explore new opportunities and collaborate with like-minded individuals
-                        to enhance my skills and knowledge in computer science.
+        <!-- Hero Section -->
+        <section id="home" class="hero-section fade-in-section">
+            <div class="container hero-content">
+                <div class="hero-visual">
+                    <img src="assets/images/profileImage.jpg" alt="Portrait of Sohrab Ali" class="hero-image" width="180"
+                        height="180" fetchpriority="high">
+                </div>
+                <div class="hero-text">
+                    <p class="hero-eyebrow">Software Developer — Backend Engineering</p>
+                    <h1 class="hero-name">Sohrab Ali</h1>
+                    <p class="hero-role">Backend Developer</p>
+                    <p class="hero-specialization">REST APIs · Authentication Systems · Database-Driven Applications ·
+                        Third-Party Integrations</p>
+                    <p class="hero-description">
+                        I build backend applications, secure REST APIs, and reliable integrations that solve
+                        real-world problems. My work focuses on Node.js, Express.js, database-driven systems, and
+                        third-party API integrations.
                     </p>
-                    <p class="profile-text text-content">
-                        My journey in Computer Science and Engineering started for September 2023 when I start Higher
-                        Education in My Collage. Since then, I've been dedicated to achieve my goals like "continuously
-                        learning new technologies" and "improve my personal & communication skills . Outside of work, I
-                        enjoy Moto-Riding & travelling.
-                    </p>
-                </div>
-
-                <div style="display: flex; flex-direction: column; gap: 2rem;"> <!-- Replaces space-y-8 -->
-                    <div class="profile-card card-bg">
-                        <h3 class="profile-card-title">Qualifications</h3>
-                        <ul class="profile-list text-content">
-                            <li><strong>B.Tech :</strong> <a style="font-size: larger;" href="https://huroorkee.ac.in/">Haridwar University</a>,
-                                 Year - September 2023 to June
-                                2027 -</li>
-                            <li><strong>SGPA : 7.4</strong></li>
-                            <li class="certificate-list" ><strong>Certification:</strong>
-                                <ul >Certificate for the Completion of </ul>
-                                <ul>C Training (IIT Bombay) with 85%</ul>
-                                <ul>Introduction to Front-End Development(meta)</ul>
-                                <ul>Programming with JavaScript(meta, coursera)</ul>
-                                <ul>Getting Python Interview Ready(simpliLearn , SkillUp) </ul>
-                                <ul>Project Management (IBM)</ul>
-                            <li>Another relevant qualification or academic achievement.</li>
-                        </ul>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="assets\documents\sohrab_april__resume_SD.pdf" class="btn btn-ghost" download>Download Resume</a>
+                        <a href="#contact" class="btn btn-ghost">Contact Me</a>
                     </div>
-
-                    <div class="profile-card card-bg">
-                        <h3 class="profile-card-title">Work Experience</h3>
-                        <div class="experience-item">
-                            <h4 class="experience-title text-secondary-heading">Fresher</h4>
-                            <p class="experience-details text-muted">Currently I have No Working Experience, but! I try
-                                to do it as soon as possible.</p>
-                            <!-- <ul class="experience-list text-content">
-                                <li>Key responsibility or achievement. Quantify if possible.</li>
-                                <li>Another key responsibility or achievement.</li>
-                                <li>Managed a team or led a specific project initiative.</li>
-                            </ul> -->
-                        </div>
-                        <!-- <div>
-                            <h4 class="experience-title text-secondary-heading">Previous Job Title (Optional)</h4>
-                            <p class="experience-details text-muted">Previous Company Name | City, State | Month Year -
-                                Month Year</p>
-                            <ul class="experience-list text-content">
-                                <li>Key responsibility or achievement.</li>
-                            </ul>
-                        </div> -->
-                    </div>
+                    <ul class="hero-social" aria-label="Social links">
+                        <li>
+                            <a href="https://github.com/ErSohrab" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub profile">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/Sohrab-ali-4a40462b6" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn profile">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:ersohrab8273@gmail.com" aria-label="Send email">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section section-bg-main fade-in-section">
-        <div class="container">
-            <h2 class="section-title text-primary-heading">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category-card">
-                    <h3 class="skill-category-title"><i class="fas fa-code"></i>Programming Languages</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag">C</span><span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span><span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span>
-                    </div>
-                </div>
-                <div class="skill-category-card">
-                    <h3 class="skill-category-title"><i class="fas fa-cogs"></i>Frameworks & Libraries</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express.js</span>
-                        <span class="skill-tag">Numpy</span>
-                        <span class="skill-tag">Pandas</span>
-                    </div>
-                </div>
-                <div class="skill-category-card">
-                    <h3 class="skill-category-title"><i class="fas fa-database"></i>Databases</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-                <div class="skill-category-card">
-                    <h3 class="skill-category-title"><i class="fas fa-tools"></i>Tools & Platforms</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag">Git & GitHub</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Jupyter Notebook</span>
-                        <span class="skill-tag">Figma</span>
-                    </div>
-                </div>
-                <div class="skill-category-card">
-                    <h3 class="skill-category-title"><i class="fas fa-comments"></i>Soft Skills</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag">Problem Solving</span>
-                        <span class="skill-tag">Teamwork</span>
-                        <span class="skill-tag">Communication</span>
-                        <span class="skill-tag">Adaptability</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- About Section -->
+        <section id="about" class="section about-section fade-in-section">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">About</p>
+                    <h2 class="section-title">Engineering-focused developer</h2>
+                </header>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section section-bg-alt fade-in-section">
-        <div class="container">
-            <h2 class="section-title text-primary-heading">My Projects</h2>
-            <p class="projects-intro text-muted">
-                Here are some of the projects I've worked on.
-            </p>
-            <div class="projects-grid">
-                <div class="project-card card-bg">
-                    <img src="/Images/LMS.png" alt="Library Management System Screenshot" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title">Library-Management-System</h3>
-                        <p class="project-description text-content">A browser-based application for managing library
-                            operations, including admin and librarian roles, student and book management, and
-                            transaction tracking.</p>
-                        <p class="project-tech text-light-muted"><strong>Technologies:</strong> HTML5, CSS3, JavaScript,
-                            SQL.
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I'm a Software Developer focused on backend engineering. My work centers on designing
+                            and building REST APIs, authentication and authorization systems, database-driven
+                            applications, and integrations with third-party platforms.
                         </p>
-                        <div class="project-links">
-                            <a href="http://librarymanagementsystembysohrab.netlify.app" target="_blank"
-                                class="demo-link"><i class="fas fa-external-link-alt"></i>Live
-                                Demo</a>
-                            <a href="https://github.com/ErSohrab/Library-Management-System" target="_blank"
-                                class="source-link"><i class="fab fa-github"></i>Source Code</a>
+                        <p>
+                            I work with Node.js, Express.js, and NestJS on the server side, and MongoDB, MySQL, and
+                            Supabase for data. I care about modular architecture, clean API contracts, secure
+                            authentication flows with JWT, and integrations that hold up in production — including
+                            WhatsApp Business API and Meta/Facebook Cloud API workflows.
+                        </p>
+                        <p>
+                            I'm currently pursuing a B.Tech in Computer Science and Engineering at Haridwar
+                            University (2023–2027), and I led a team as part of an inter-college hackathon.
+                        </p>
+                    </div>
+
+                    <div class="about-credentials">
+                        <!-- Education -->
+                        <article class="education-card card">
+                            <h3 class="card-title">Education</h3>
+                            <ul class="credential-list">
+                                <li>
+                                    <strong>B.Tech — Computer Science &amp; Engineering</strong>
+                                    <span class="credential-org">Haridwar University, Roorkee</span>
+                                    <span class="credential-meta">2023–2027 · CGPA 7.0/10</span>
+                                </li>
+                                <li>
+                                    <strong>Higher Secondary Education</strong>
+                                    <span class="credential-org">Krishna Public School, Faridpur (Bareilly)</span>
+                                    <span class="credential-meta">2023 · 67%</span>
+                                </li>
+                            </ul>
+                        </article>
+
+                        <!-- Certifications -->
+                        <article class="certifications-card card">
+                            <h3 class="card-title">Certifications</h3>
+                            <ul class="credential-list">
+                                <li>
+                                    <strong>NPTEL — Database Management Systems</strong>
+                                    <span class="credential-org">IIT Kharagpur · 8-week course</span>
+                                </li>
+                                <li>
+                                    <strong>JavaScript Certification</strong>
+                                    <span class="credential-org">IIT Bombay · 2025 · Score: 80/100</span>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section fade-in-section">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Technical Skills</p>
+                    <h2 class="section-title">What I work with</h2>
+                </header>
+
+                <div class="skills-grid">
+                    <article class="skill-card card skill-card-featured">
+                        <h3 class="skill-card-title"><i class="fas fa-server" aria-hidden="true"></i>Backend
+                            Development</h3>
+                        <ul class="skill-tags">
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>NestJS</li>
+                            <li>REST API Development</li>
+                            <li>JWT Authentication</li>
+                            <li>BullMQ</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card card">
+                        <h3 class="skill-card-title"><i class="fas fa-plug" aria-hidden="true"></i>APIs &amp;
+                            Integrations</h3>
+                        <ul class="skill-tags">
+                            <li>WhatsApp Business API</li>
+                            <li>Meta/Facebook Cloud API</li>
+                            <li>Webhooks</li>
+                            <li>API Integration</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card card">
+                        <h3 class="skill-card-title"><i class="fas fa-database" aria-hidden="true"></i>Databases
+                        </h3>
+                        <ul class="skill-tags">
+                            <li>MongoDB</li>
+                            <li>MySQL</li>
+                            <li>Supabase</li>
+                            <li>Redis (Basic)</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card card">
+                        <h3 class="skill-card-title"><i class="fas fa-code" aria-hidden="true"></i>Programming
+                            Languages</h3>
+                        <ul class="skill-tags">
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>C</li>
+                            <li>Java (Basic)</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card card">
+                        <h3 class="skill-card-title"><i class="fas fa-tools" aria-hidden="true"></i>Developer
+                            Tools</h3>
+                        <ul class="skill-tags">
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>VS Code</li>
+                            <li>Postman</li>
+                            <li>Docker (Basic)</li>
+                            <li>GitHub Copilot</li>
+                            <li>Codex</li>
+                            <li>Claude</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section fade-in-section">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Professional Experience</p>
+                    <h2 class="section-title">Where I've worked</h2>
+                </header>
+
+                <ol class="experience-timeline">
+                    <li class="experience-card card">
+                        <div class="experience-meta">
+                            <span class="experience-mode">Remote</span>
+                            <span class="experience-dates">August 2026 – November 2026</span>
                         </div>
-                    </div>
-                </div>
-                <div class="project-card card-bg">
-                    <img src="https://placehold.co/600x400/C4B5FD/374151?text=Online Grading System"
-                        alt="Project 2 Screenshot" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title">Online Grading System</h3>
-                        <p class="project-description text-content">Under Development, <br>May It deploy as soon as
-                            possible</p>
-                        <!-- <p class="project-tech text-light-muted"><strong>Technologies:</strong> Vue.js, Firebase, CSS
-                            Grid</p>
-                        <div class="project-links">
-                            <a href="#" target="_blank" class="demo-link"><i class="fas fa-external-link-alt"></i>Live
-                                Demo</a>
-                            <a href="#" target="_blank" class="source-link"><i class="fab fa-github"></i>Source Code</a>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="project-card card-bg">
-                    <img src="https://placehold.co/600x400/DDD6FE/374151?text= Future Projects"
-                        alt="Project 3 Screenshot" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title">Future Projects+</h3>
-                        <!-- <p class="project-description text-content">A mobile-first application designed for [specific
-                            purpose]. Leveraged modern UI principles for an engaging experience.</p>
-                        <p class="project-tech text-light-muted"><strong>Technologies:</strong> Python (Django),
-                            PostgreSQL, Docker</p>
-                        <div class="project-links">
-                            <a href="#" target="_blank" class="demo-link"><i class="fas fa-external-link-alt"></i>Live
-                                Demo</a>
-                            <a href="#" target="_blank" class="source-link"><i class="fab fa-github"></i>Source Code</a>
-                        </div> -->
-                    </div>
+                        <h3 class="experience-role">Backend Developer Intern</h3>
+                        <p class="experience-org">TryLity Automation Solutions</p>
+                        <ul class="experience-list">
+                            <li>Developing and maintaining WhatsApp Business API automation workflows.</li>
+                            <li>Building backend APIs and server-side workflows.</li>
+                            <li>Working on database schemas, debugging, testing, and API improvements.</li>
+                        </ul>
+                        <ul class="skill-tags experience-tags" aria-label="Technologies used">
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>MongoDB</li>
+                            <li>WhatsApp Business API</li>
+                        </ul>
+                    </li>
+
+                    <li class="experience-card card">
+                        <div class="experience-meta">
+                            <span class="experience-mode">Offline</span>
+                            <span class="experience-dates">January 2026 – March 2026</span>
+                        </div>
+                        <h3 class="experience-role">MERN Stack Developer — ERP System</h3>
+                        <p class="experience-org">Haridwar University</p>
+                        <ul class="experience-list">
+                            <li>Developed backend APIs using Node.js, Express.js, and MongoDB.</li>
+                            <li>Implemented JWT authentication and role-based access control.</li>
+                            <li>Optimized database queries and improved backend performance.</li>
+                            <li>Built responsive UI components and integrated real-time features.</li>
+                        </ul>
+                        <ul class="skill-tags experience-tags" aria-label="Technologies used">
+                            <li>MongoDB</li>
+                            <li>Express.js</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>JWT</li>
+                        </ul>
+                    </li>
+
+                    <li class="experience-card card">
+                        <div class="experience-meta">
+                            <span class="experience-mode">Online</span>
+                            <span class="experience-dates">October 2025 – November 2025</span>
+                        </div>
+                        <h3 class="experience-role">Web Developer Intern</h3>
+                        <p class="experience-org">CodeSoft</p>
+                        <ul class="experience-list">
+                            <li>Developed full-stack applications using React, Node.js, Express.js, and
+                                MongoDB.</li>
+                            <li>Built and integrated RESTful APIs.</li>
+                            <li>Optimized backend performance and maintained modular code.</li>
+                        </ul>
+                        <ul class="skill-tags experience-tags" aria-label="Technologies used">
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section fade-in-section">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Featured Projects</p>
+                    <h2 class="section-title">Things I've built</h2>
+                </header>
+
+                <div class="projects-grid">
+                    <!-- Project A: Library Management System (verified) -->
+                    <article class="project-card card">
+                        <img src="assets/images/LMS.png" alt="Library Management System screenshot" class="project-image"
+                            width="1005" height="754" loading="lazy" decoding="async">
+                        <div class="project-content">
+                            <h3 class="project-title">Library Management System</h3>
+                            <p class="project-description">
+                                A browser-based library management platform with role-based access for admins,
+                                librarians, and students — covering book cataloging, member management, and
+                                issue/return transaction tracking.
+                            </p>
+                            <p class="project-tech"><strong>Technologies:</strong> HTML5, CSS3, JavaScript, SQL</p>
+                            <ul class="project-features">
+                                <li>Role-based access control</li>
+                                <li>Book &amp; member management</li>
+                                <li>Transaction tracking</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="http://librarymanagementsystembysohrab.netlify.app" target="_blank"
+                                    rel="noopener noreferrer" class="project-link"><i
+                                        class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                                <a href="https://github.com/ErSohrab/Library-Management-System" target="_blank"
+                                    rel="noopener noreferrer" class="project-link"><i class="fab fa-github"
+                                        aria-hidden="true"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project B: Report System (resume-provided, links pending) -->
+                    <article class="project-card card">
+                        <div class="project-content">
+                            <p class="project-status">Source code link pending</p>
+                            <h3 class="project-title">Report System for Local Municipalities</h3>
+                            <p class="project-description">
+                                A citizen reporting platform with role-based access for citizens and officials,
+                                geo-tagging, and report management APIs.
+                            </p>
+                            <p class="project-tech"><strong>Technologies:</strong> React, Node.js, Express.js,
+                                MongoDB</p>
+                            <ul class="project-features">
+                                <li>Role-based access (citizens &amp; officials)</li>
+                                <li>Geo-tagged report submission</li>
+                                <li>Report lifecycle management APIs</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Project C: Quiz Web App (resume-provided, links pending) -->
+                    <article class="project-card card">
+                        <div class="project-content">
+                            <p class="project-status">Source code link pending</p>
+                            <h3 class="project-title">Quiz Web App</h3>
+                            <p class="project-description">
+                                A quiz platform supporting quiz creation, MCQ management, automated scoring,
+                                and result generation with role-based access.
+                            </p>
+                            <p class="project-tech"><strong>Technologies:</strong> EJS, Node.js, Express.js,
+                                MongoDB</p>
+                            <ul class="project-features">
+                                <li>Quiz &amp; MCQ management</li>
+                                <li>Automated scoring &amp; results</li>
+                                <li>Role-based access</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Project D: Portfolio Website -->
+                    <article class="project-card card">
+                        <div class="project-content">
+                            <h3 class="project-title">Portfolio Website</h3>
+                            <p class="project-description">
+                                A responsive professional developer portfolio built with semantic HTML, custom
+                                CSS, and Vanilla JavaScript — featuring dark/light theming, accessible
+                                navigation, and scroll-triggered animations. Deployed on Netlify.
+                            </p>
+                            <p class="project-tech"><strong>Technologies:</strong> HTML5, CSS3, Vanilla
+                                JavaScript</p>
+                            <div class="project-links">
+                                <a href="https://myportfiosohrabali.netlify.app" target="_blank"
+                                    rel="noopener noreferrer" class="project-link"><i
+                                        class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Site</a>
+                                <a href="https://github.com/ErSohrab/my-portfolio-Sohrab" target="_blank"
+                                    rel="noopener noreferrer" class="project-link"><i class="fab fa-github"
+                                        aria-hidden="true"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Social Section -->
-    <section id="social" class="section section-bg-main fade-in-section">
-        <div class="container text-center">
-            <h2 class="section-title text-primary-heading">Connect With Me</h2>
-            <p class="social-intro text-muted">
-                Find me on various platforms. I'm always open to connecting with like-minded professionals and
-                enthusiasts!
-            </p>
-            <div class="social-icons-container">
-                <a href="https://www.linkedin.com/in/sohrab-ali-4a40462b6" target="_blank" class="social-icon-link">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/ErSohrab?tab=projects" target="_blank" class="social-icon-link">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://mail.google.com/mail/u/0/?ogbl#drafts?compose=new" class="social-icon-link">
-                    <i class="fas fa-envelope"></i>
-                </a>
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section fade-in-section">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Contact</p>
+                    <h2 class="section-title">Let's build something reliable.</h2>
+                    <p class="section-description">
+                        Have an opportunity, project idea, or technical discussion? Feel free to get in touch.
+                    </p>
+                </header>
+
+                <div class="contact-grid">
+                    <form class="contact-form card" action="https://formspree.io/f/xwpblgad" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe"
+                                autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com"
+                                autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input"
+                                placeholder="Project inquiry">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Your message..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                    </form>
+
+                    <aside class="contact-info card">
+                        <h3 class="card-title">Get in touch directly</h3>
+                        <ul class="contact-links">
+                            <li>
+                                <a href="mailto:ersohrab8273@gmail.com">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <span>ersohrab8273@gmail.com</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/ErSohrab" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                    <span>github.com/ErSohrab</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://linkedin.com/in/Sohrab-ali-4a40462b6" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    <span>linkedin.com/in/sohrab-ali-4a40462b6</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact" class="section section-bg-alt fade-in-section">
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
         <div class="container">
-            <h2 class="section-title text-primary-heading">Get In Touch</h2>
-            <div class="contact-form-container card-bg">
-                <p class="contact-intro text-content">
-                    Have a project in mind, a question, or just want to say hi? Feel free to reach out!
-                </p>
-                <form action="https://formspree.io/f/xwpblgad" method="POST">
-                    <div class="form-group">
-                        <label for="name" class="form-label text-content">Full Name</label>
-                        <input type="text" id="name" name="name" class="form-input border-color" placeholder="John Doe"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label text-content">Email Address</label>
-                        <input type="email" id="email" name="email" class="form-input border-color"
-                            placeholder="you@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject" class="form-label text-content">Subject</label>
-                        <input type="text" id="subject" name="subject" class="form-input border-color"
-                            placeholder="Project Inquiry">
-                    </div>
-                    <div class="form-group" style="margin-bottom: 2rem;"> <!-- mb-8 -->
-                        <label for="message" class="form-label text-content">Message</label>
-                        <textarea id="message" name="message" class="form-textarea border-color"
-                            placeholder="Your message..." required></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="submit-button transform hover-scale-105">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-                <p class="contact-alt-email text-light-muted">
-                    Or email me directly at: <a href="mailto:ersohrab8273@gmail.com"
-                        class="hover-text-accent">ersohrab8273@gmail.com</a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-social-links">
-                <a href="https://www.linkedin.com/in/sohrab-ali-4a40462b6" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/ErSohrab?tab=projects" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://mail.google.com/mail/u/0/?ogbl#drafts?compose=new"><i class="fas fa-envelope"></i></a>
-            </div>
+            <p class="footer-name">Sohrab Ali</p>
+            <p class="footer-role">Software Developer — Backend Engineering</p>
+            <ul class="footer-social" aria-label="Social links">
+                <li>
+                    <a href="https://github.com/ErSohrab" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub profile">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/Sohrab-ali-4a40462b6" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn profile">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:ersohrab8273@gmail.com" aria-label="Send email">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
             <p class="footer-copyright">&copy; <span id="currentYear"></span> Sohrab Ali. All rights reserved.</p>
-            <p class="footer-credits">Designed with <i class="fas fa-heart"></i> using CSS.</p>
+            <p class="footer-credits">Built with HTML, CSS &amp; Vanilla JavaScript.</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
-

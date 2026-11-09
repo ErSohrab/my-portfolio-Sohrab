@@ -1,0 +1,50 @@
+/* ---------- Contact Section ---------- */
+.contact-grid {
+    display: grid;
+    gap: var(--space-6);
+    max-width: 900px;
+    margin-inline: auto;
+    align-items: start;
+}
+
+.contact-form {
+    display: grid;
+    gap: var(--space-6);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-links {
+    display: grid;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+}
+
+.contact-links a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 12px 0;
+    color: var(--text-secondary);
+    font-size: var(--text-small);
+    border-bottom: 1px solid var(--border);
+    transition: color var(--transition-fast);
+}
+
+.contact-links li:last-child a {
+    border-bottom: none;
+}
+
+.contact-links a:hover {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.contact-links i {
+    width: 20px;
+    text-align: center;
+    color: var(--accent-primary);
+}
