@@ -1,0 +1,5 @@
+/* ---------- Responsive: Mobile (320px–767px) ----------
+   Base styles are mobile-first and live in the component/section
+   files. No overrides are required below 768px — the single-column
+   layouts, fluid type (clamp), wrapping flex rows, and 44px touch
+   targets are defined in the base rules. */

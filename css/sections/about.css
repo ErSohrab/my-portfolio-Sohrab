@@ -1,0 +1,55 @@
+/* ---------- About Section ---------- */
+.about-grid {
+    display: grid;
+    gap: var(--space-8);
+    align-items: start;
+}
+
+.about-text p + p {
+    margin-top: var(--space-4);
+}
+
+.about-text p {
+    color: var(--text-secondary);
+}
+
+.about-credentials {
+    display: grid;
+    gap: var(--space-6);
+}
+
+.credential-list li {
+    padding-block: var(--space-3);
+    border-bottom: 1px solid var(--border);
+}
+
+.credential-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.credential-list li:first-child {
+    padding-top: 0;
+}
+
+.credential-list strong {
+    display: block;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: var(--text-small);
+}
+
+.credential-org {
+    display: block;
+    color: var(--text-secondary);
+    font-size: var(--text-small);
+    margin-top: 2px;
+}
+
+.credential-meta {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    color: var(--text-faint);
+    margin-top: var(--space-1);
+}

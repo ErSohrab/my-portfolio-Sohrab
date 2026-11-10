@@ -1,0 +1,57 @@
+/* ---------- Footer ---------- */
+.site-footer {
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-secondary);
+    padding-block: var(--space-12);
+    text-align: center;
+}
+
+.footer-name {
+    font-weight: 700;
+    font-size: var(--text-body);
+}
+
+.footer-role {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    color: var(--text-secondary);
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-6);
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border);
+    color: var(--text-faint);
+    font-size: 1rem;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.footer-social a:hover {
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.footer-copyright {
+    font-size: var(--text-small);
+    color: var(--text-secondary);
+}
+
+.footer-credits {
+    font-size: var(--text-label);
+    color: var(--text-secondary);
+    margin-top: var(--space-2);
+}

@@ -1,0 +1,56 @@
+/* ---------- Badges & Tags ---------- */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.skill-tags li {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    font-weight: 500;
+    color: var(--text-secondary);
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    padding: 5px 12px;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.skill-tags li:hover {
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.experience-mode {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-secondary);
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    padding: 3px 10px;
+}
+
+.experience-dates {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    color: var(--text-faint);
+}
+
+.project-status {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius-full);
+    padding: 3px 10px;
+    align-self: flex-start;
+    margin-bottom: var(--space-4);
+}

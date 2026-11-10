@@ -1,0 +1,84 @@
+/* ---------- Responsive: Tablet & Desktop ---------- */
+@media (min-width: 768px) {
+    .mobile-menu-button {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+    }
+
+    .hero-content {
+        grid-template-columns: 200px 1fr;
+        gap: var(--space-16);
+    }
+
+    .hero-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
+
+    .hero-specialization {
+        max-width: 640px;
+    }
+
+    .about-grid {
+        grid-template-columns: 3fr 2fr;
+        gap: var(--space-12);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-card-featured {
+        grid-column: 1 / -1;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .btn-submit {
+        justify-self: end;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skill-card-featured {
+        grid-column: auto;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-card:first-child {
+        grid-column: 1 / -1;
+        flex-direction: row;
+    }
+
+    .project-card:first-child .project-image {
+        width: 40%;
+        height: auto;
+        min-height: 100%;
+        border-bottom: none;
+        border-right: 1px solid var(--border);
+    }
+
+    .project-card:first-child .project-content {
+        width: 60%;
+    }
+}
